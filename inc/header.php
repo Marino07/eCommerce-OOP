@@ -31,6 +31,11 @@ $user = new User();
                 </li>
             <?php  else: ?>
                 <li class="nav-item">
+                    <a class="nav-link" href="cart.php">
+                        Cart
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="orders.php">My Orders</a>
                 </li>
                 <li class="nav-item">

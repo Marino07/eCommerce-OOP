@@ -25,6 +25,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 ?>
 <?php include_once 'inc/header.php'?>
+<?php if($user->is_logged()){
+    header("Location:index.php");
+} ?>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">

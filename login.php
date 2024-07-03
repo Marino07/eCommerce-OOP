@@ -3,6 +3,7 @@ require_once 'inc/header.php';
 require_once 'app/classes/User.php';
 
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -20,6 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
+<?php if($user->is_logged()){
+    header("Location:index.php");
+} ?>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center">Login</h2>
