@@ -1,6 +1,5 @@
 <?php
 require_once 'app/config/config.php';
-
 class User
 {
     protected $conn;
@@ -46,6 +45,17 @@ class User
 
     public function is_logged(){
         if(isset($_SESSION['user_id'])){
+            return true;
+        }
+        return false;
+    }
+    public function is_admin(){
+        $query = "SELECT * FROM users where user_id = ? and is_admin = 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i",$_SESSION['user_id']);
+        $stmt->execute();
+        $rez = $stmt->get_result();
+        if($rez->num_rows>0){
             return true;
         }
         return false;
