@@ -7,8 +7,9 @@ $user = new User;
 <?php if($user->is_logged() && $user->is_admin()):
    $product = new Product();
     $products = $product->fetch_all();
-
+//crud
 ?>
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -18,6 +19,7 @@ $user = new User;
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
+        <?php include 'inc/header.php'; ?>
     <div class="container mt-5">
         <h1 class="mb-4">Products</h1>
         <a href="add_product.php" class="btn btn-primary mb-3">Add Product</a>

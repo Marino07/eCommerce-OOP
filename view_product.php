@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                         </p>
                     </div>
                     <form action="" method="POST">
-                        <input type="number" name="quantity">
+                        <input type="number" name="quantity" min="1">
                         <button type="submit" class="btn btn-primary">Add to cart</button>
                     </form>
                 </div>

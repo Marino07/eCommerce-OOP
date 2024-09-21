@@ -14,7 +14,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <?php foreach ($products as $product): ?>
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="images/<?php echo $product['image']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
+                <img height="300px" width="300px" src="<?php echo $product['image']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $product['name']; ?></h5>
                     <p class="card-text">

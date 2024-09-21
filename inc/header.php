@@ -14,6 +14,9 @@ $user = new User();
 <body>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="index.php">Shop</a>
+    <?php if($user->is_admin()): ?>
+        <a class="nav-link ml-auto" href="add_product.php" style="color:#3293a8;">Add Product</a>
+    <?php endif; ?>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,6 +41,12 @@ $user = new User();
                 <li class="nav-item">
                     <a class="nav-link" href="orders.php">My Orders</a>
                 </li>
+                <?php
+                if($user->is_admin()): ?>
+                    <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin</a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php">Logout</a>
                 </li>

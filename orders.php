@@ -34,7 +34,7 @@ $order = $orders->get_order();
                 <td><?php echo $o['quantity']; ?></td>
                 <td><?php echo $o['price']; ?></td>
                 <td><?php echo $o['size']; ?></td>
-                <td><img src="<?php echo $o['image']; ?>" alt="Product Image" style="width: 100px; height: auto;"></td>
+                <td><img src="<?php echo $o['image']; ?>" width="50px" height="50px" alt="Product Image"></td>
                 <td>
                     <?php echo $o['address']; ?><br>
                 </td>
@@ -44,9 +44,6 @@ $order = $orders->get_order();
         </tbody>
     </table>
 
-    <form action="checkout.php" method="POST">
-        <a href="checkout.php" class="btn btn-primary">Checkout</a>
-    </form>
 </div>
 
 

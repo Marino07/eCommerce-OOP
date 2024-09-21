@@ -32,7 +32,7 @@ $total = $cart->get_products_with_total_price();
         <tr>
             <td><?php echo $item['name']; ?></td>
             <td><?php echo $item['total_price']; ?></td>
-            <td><img src="<?php echo $item['image'];?>"> </td>
+            <td><img height="50px" width="50px" src="<?php echo $item['image'];?>"> </td>
             <td><?php echo $item['quantity']; ?></td>
         </tr>
     <?php endforeach; ?>

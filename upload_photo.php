@@ -1,5 +1,5 @@
 <?php
-/*
+
 $photo = $_FILES['photo'];
 $photo_name = basename($photo['name']);
 
@@ -18,9 +18,6 @@ if (in_array($ext, $allowed_ext) && $photo['size'] < 2000000) {
 } else {
     echo json_encode(['success' => false, 'error' => 'Invalid file']);
 }
-            TODO: FIX BUGG ON DROPZONE:
-             $_FILES;
-*/
 ?>
 
 
